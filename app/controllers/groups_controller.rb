@@ -19,10 +19,11 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     if @group.save
     redirect_to groups_path
-  else
+    else
     render :new
+   end
   end
-end
+
 
   def update
     @group = Group.find(params[:id])
